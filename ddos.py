@@ -102,10 +102,7 @@ class httpPost(Thread):
                     pass
  
 def usage():
-    print "Contoh CMD"
-    print "ddos.py -t 192.168.10.1 -r 1000"
-    print " -t|--target <IP>"
-    print " -r|--threads <Max 1000> 
+    print "Eg. ./ddos.py -t 192.168.1.100 -r 1000\n"
 
 def main(argv):
     
